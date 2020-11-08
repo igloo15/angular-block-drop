@@ -1,0 +1,9 @@
+<div #containerElem>
+    <div #innerElem>
+        <ng-container *ngFor="let block of blocks">
+            <bd-block [name]="block.id" [parent]="area">
+    
+            </bd-block>
+        </ng-container>
+    </div>
+</div>
