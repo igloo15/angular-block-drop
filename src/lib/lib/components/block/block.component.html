@@ -1,5 +1,8 @@
-<div>
-    <ng-content>
-
-    </ng-content>
+<div #blockMain class="block-main" [ngClass]="options.className">
+    <ng-container *ngFor="let output of outputs">
+        <bd-output [area]="parent" [parent]="block" [options]="output"></bd-output>
+    </ng-container>
+    <ng-container *ngFor="let input of inputs">
+        <bd-input [area]="parent" [parent]="block" [options]="input"></bd-input>
+    </ng-container>
 </div>

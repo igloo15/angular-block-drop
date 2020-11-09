@@ -1,9 +1,7 @@
-<div #containerElem>
+<div #containerElem class="area-container" [ngClass]="options.className">
     <div #innerElem>
-        <ng-container *ngFor="let block of blocks">
-            <bd-block [name]="block.id" [parent]="area">
-    
-            </bd-block>
+        <ng-container *ngFor="let block of blocks" >
+            <bd-block [options]="block" [parent]="area"></bd-block>
         </ng-container>
     </div>
 </div>
